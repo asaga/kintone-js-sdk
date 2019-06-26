@@ -1,4 +1,4 @@
-# kintone-js-sdk
+# kintone-js-sdk(fork)
 REST API client of kintone for node.js and javascript 
 
 # Installation
