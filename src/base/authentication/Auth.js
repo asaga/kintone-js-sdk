@@ -10,7 +10,26 @@ class Auth {
     this.basicAuth = null;
     this.passwordAuth = null;
     this.apiToken = null;
+    this.accessToken = null;
   }
+
+    /**
+     * setAccessToken
+     * @param {String} accesstoken
+     * @return {this}
+     */
+    setAccessToken(accesstoken) {
+        this.accessToken = accesstoken;
+        return this;
+      }
+
+    /**
+     * getAccessToken
+     * @return {KintoneCredential}
+     */
+    getAccessToken() {
+        return this.accessToken;
+      }
 
   /**
      * setBasicAuth
