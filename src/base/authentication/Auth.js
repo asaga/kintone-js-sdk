@@ -92,6 +92,14 @@ class Auth {
      */
   createHeaderCredentials() {
     const headerCredentials = [];
+    if (this.accessToken) {
+        headerCredentials.push(
+          new KintoneHTTPHeader(
+            AUTH_CONST.HEADER_KEY_AUTH_BASIC,
+            'Bearer ' + this.accessToken
+          )
+        );
+      }
     if (this.apiToken) {
       headerCredentials.push(new KintoneHTTPHeader(AUTH_CONST.HEADER_KEY_AUTH_APITOKEN, this.apiToken));
     }
